@@ -54,12 +54,60 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.download">module download</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.download.download">
+            function <span class="apidocSignatureSpan"></span>download
+            <span class="apidocSignatureSpan">(uri, output, opts)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.download" id="apidoc.module.download">module download</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.download.download" id="apidoc.element.download.download">
+        function <span class="apidocSignatureSpan"></span>download
+        <span class="apidocSignatureSpan">(uri, output, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(uri, output, opts) =&gt; {
+	if (typeof output === 'object') {
+		opts = output;
+		output = null;
+	}
+
+	opts = Object.assign({
+		encoding: null,
+		rejectUnauthorized: process.env.npm_config_strict_ssl !== 'false'
+	}, opts);
+
+	let protocol = url.parse(uri).protocol;
+
+	if (protocol) {
+		protocol = protocol.slice(0, -1);
+	}
+
+	const agent = caw(opts.proxy, {protocol});
+	const stream = got.stream(uri, Object.assign(opts, {agent}));
+	const dest = output ? path.join(output, filenamify(path.basename(uri))) : null;
+	const promise = createPromise(uri, dest, stream, opts);
+
+	stream.then = promise.then.bind(promise);
+	stream.catch = promise.catch.bind(promise);
+
+	return stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

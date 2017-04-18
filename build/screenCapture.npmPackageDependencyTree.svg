@@ -20,7 +20,7 @@
 <tspan x="10" y="282">  │ │   ├─┬ end-of-stream@1.4.0 </tspan>
 <tspan x="10" y="298">  │ │   │ └─┬ once@1.4.0 </tspan>
 <tspan x="10" y="314">  │ │   │   └── wrappy@1.0.2 </tspan>
-<tspan x="10" y="330">  │ │   ├─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="330">  │ │   ├─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="346">  │ │   │ ├── buffer-shims@1.0.0 </tspan>
 <tspan x="10" y="362">  │ │   │ ├── core-util-is@1.0.2 </tspan>
 <tspan x="10" y="378">  │ │   │ ├── inherits@2.0.3 </tspan>
