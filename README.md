@@ -1,6 +1,6 @@
 # npmdoc-download
 
-#### api documentation for  [download (v5.0.3)](https://github.com/kevva/download#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-download.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-download) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-download.svg)](https://travis-ci.org/npmdoc/node-npmdoc-download)
+#### basic api documentation for  [download (v5.0.3)](https://github.com/kevva/download#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-download.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-download) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-download.svg)](https://travis-ci.org/npmdoc/node-npmdoc-download)
 
 #### Download and extract files
 
@@ -91,7 +91,8 @@
     "version": "5.0.3",
     "xo": {
         "esnext": true
-    }
+    },
+    "bin": {}
 }
 ```
 
